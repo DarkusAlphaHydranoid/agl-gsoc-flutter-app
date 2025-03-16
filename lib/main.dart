@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'AGL GSOC FLUTTER APP'),
     );
   }
 }
@@ -105,20 +105,33 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          child: TextButton(
-            onPressed: _incrementCounter,
-            child: Container(
-              color: Colors.green,
-              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              child: const Text(
-                'Flat Button',
-                style: TextStyle(color: Colors.white, fontSize: 13.0),
+          child : ListView(
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
+            children : [
+              Center(
+                child : const Text(
+                  "Cihat Kurtuluş Altıparmak",
+                ),
               ),
-            ),
+              Center(
+                // Center is a layout widget. It takes a single child and positions it
+                // in the middle of the parent.
+                child: TextButton(
+                  onPressed: _incrementCounter,
+                  child: Container(
+                    color: Colors.green,
+                    padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                    child: const Text(
+                      'Click Me',
+                      style: TextStyle(color: Colors.white, fontSize: 13.0),
+                    ),
+                  ),
+                ),
+              ),
+            ]
           ),
-        )
+        ),
       );
     }
   }
